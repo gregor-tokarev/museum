@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  main:
+    network_mode: host
+    env_file:
+      - ./.env.development
+    restart: always
+    build: ./
+    ports:
+    - 3000:3000
+  mongo:
+    network_mode: host
+    env_file:
+      - ./.env.development
+    restart: always
+    image: mongo
+    command: --serviceExecutor adaptive
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASS}
