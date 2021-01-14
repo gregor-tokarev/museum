@@ -2,20 +2,19 @@ version: "3"
 
 services:
   main:
-    network_mode: host
+    container_name: node_app
     env_file:
-      - ./.env.development
-    restart: always
-    build: ./
-    ports:
-    - 3000:3000
-  mongo:
-    network_mode: host
-    env_file:
-      - ./.env.development
-    restart: always
-    image: mongo
-    command: --serviceExecutor adaptive
+      - .env
+    volumes:
+    - uploaddata:/var/app/upload
     environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASS}
+      NODE_ENV: production
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - 8000:8000
+volumes:
+  dbdata:
+  uploaddata:

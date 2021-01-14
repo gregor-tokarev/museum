@@ -1,15 +1,35 @@
-const express = require('express');
-const helmet = require('helmet');
-const gzip = require('express-static-gzip');
-require('dotenv').config({path: __dirname + `.env.${ process.env.NODE_ENV }`})
+// imports
+const express = require('express')
+const helmet = require('helmet')
+const gzip = require('express-static-gzip')
+const path = require('path')
+const {connect, get: getDb} = require('./util/dbConnection')
+require('dotenv').config()
 
+const adminRouter = require('./router/admin')
+
+// configure express app
 const app = express()
 app.use('/static', gzip(__dirname + '/static'))
 app.use('/upload', gzip(__dirname + '/upload'))
 app.use(helmet())
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, '/pages'))
 
-app.get('/', ((req, res) => {
-  res.send('Hello world')
-}))
+// routes
+app.get('/', async (req, res) => {
+  const db = getDb()
+  await db.collection('test').insertOne({name: 'hello world'})
+  const message = await db.collection('test').findOne()
+  res.send(message.name)
+})
+app.use('/admin/', adminRouter)
 
-app.listen(process.env.PORT)
+// connect to database and run app
+connect()
+  .then(() => {
+    return app.listen(process.env.PORT)
+  })
+  .then(() => {
+    console.log(`App is running on tort: ${ process.env.PORT }`)
+  })

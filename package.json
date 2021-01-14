@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "start": "set NODE_ENV=production && node app.js",
-    "dev": "set NODE_ENV=development && nodemon app.js"
+    "test": "node_modules/.bin/jest",
+    "start": "node app.js",
+    "dev": "node_modules/.bin/nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -20,11 +20,15 @@
     "express-validator": "^6.8.0",
     "helmet": "^4.2.0",
     "mongodb": "^3.6.3",
-    "mongoose": "^5.11.8",
     "multer": "^1.4.2",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
     "jest": "^26.6.3",
     "nodemon": "^2.0.6"
   }
