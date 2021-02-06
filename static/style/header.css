@@ -1,0 +1,49 @@
+header {
+    width: 100%;
+    background: #FFFBEB;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 74%;
+    height: 101px;
+    margin-left: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 24%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    font-size: 37.33px;
+    color: #BB2929;
+}
+
+.menu {
+    width: 53%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__item {
+    display: block;
+    color: #ED4040;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.menu__item:hover {
+    color: #BB2929;
+}
+
+a {
+    text-decoration: none;
+}

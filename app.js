@@ -3,7 +3,7 @@ const express = require('express')
 const helmet = require('helmet')
 const gzip = require('express-static-gzip')
 const path = require('path')
-const {connect, get: getDb} = require('./util/dbConnection')
+const { connect, get: getDb } = require('./util/dbConnection')
 require('dotenv').config()
 
 const adminRouter = require('./router/admin')
@@ -17,19 +17,16 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/pages'))
 
 // routes
-app.get('/', async (req, res) => {
-  const db = getDb()
-  await db.collection('test').insertOne({name: 'hello world'})
-  const message = await db.collection('test').findOne()
-  res.send(message.name)
+app.get('/', async(req, res) => {
+    res.render('index')
 })
 app.use('/admin/', adminRouter)
 
 // connect to database and run app
 connect()
-  .then(() => {
-    return app.listen(process.env.PORT)
-  })
-  .then(() => {
-    console.log(`App is running on tort: ${ process.env.PORT }`)
-  })
+    .then(() => {
+        return app.listen(process.env.PORT)
+    })
+    .then(() => {
+        console.log(`App is running on port: ${ process.env.PORT }`)
+    })
