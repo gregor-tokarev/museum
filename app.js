@@ -7,6 +7,7 @@ const { connect } = require('./util/dbConnection')
 require('dotenv').config()
 
 const adminRouter = require('./router/admin')
+const commonRtouter = require('./router/common')
 
 // configure express app
 const app = express()
@@ -17,9 +18,7 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/pages'))
 
 // routes
-app.get('/', async(req, res) => {
-    res.render('index')
-})
+app.get('', commonRtouter)
 app.use('/admin', adminRouter)
 
 // connect to database and run app
