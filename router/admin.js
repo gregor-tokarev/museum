@@ -18,6 +18,7 @@ router.all('*', (req, res, next) => {
 
 router.delete('/:id')
 
+// see https://www.npmjs.com/package/multer documentation
 router.post('/', upload.array('images', 10), create)
 
 router.put('/:id')

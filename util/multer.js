@@ -2,6 +2,7 @@ const path = require('path')
 const multer = require('multer')
 const { v4: uuid } = require('uuid')
 
+// see https://www.npmjs.com/package/multer documentation
 const storage = multer.diskStorage({
   destination(req, file, cb) {
     cb(null, 'upload')
