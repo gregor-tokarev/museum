@@ -3,7 +3,7 @@ const express = require('express')
 const helmet = require('helmet')
 const gzip = require('express-static-gzip')
 const path = require('path')
-const { connect, get: getDb } = require('./util/dbConnection')
+const { connect } = require('./util/dbConnection')
 require('dotenv').config()
 
 const adminRouter = require('./router/admin')
@@ -20,7 +20,7 @@ app.set('views', path.join(__dirname, '/pages'))
 app.get('/', async(req, res) => {
     res.render('index')
 })
-app.use('/admin/', adminRouter)
+app.use('/admin', adminRouter)
 
 // connect to database and run app
 connect()
