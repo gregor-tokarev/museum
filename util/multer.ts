@@ -1,17 +1,16 @@
-const path = require('path')
-const multer = require('multer')
-const { v4: uuid } = require('uuid')
+import path from 'path'
+import multer, {FileFilterCallback} from "multer";
+import {v4} from 'uuid'
 
-// see https://www.npmjs.com/package/multer documentation
 const storage = multer.diskStorage({
   destination(req, file, cb) {
     cb(null, 'upload')
   },
   filename(req, file, cb) {
-    cb(null, uuid() + path.extname(file.originalname))
+    cb(null, v4() + path.extname(file.originalname))
   }
 })
-function fileFilter(req, file, cb) {
+function fileFilter(req: any, file: Express.Multer.File, cb: FileFilterCallback) {
   if (file.mimetype.includes('image')) {
     cb(null, true)
   } else {
@@ -21,4 +20,4 @@ function fileFilter(req, file, cb) {
 
 const upload = multer({ storage, fileFilter, limits: {fileSize: 1024*1024*5} })
 
-module.exports = upload
+export default upload

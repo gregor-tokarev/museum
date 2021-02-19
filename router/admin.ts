@@ -1,11 +1,11 @@
-const {Router} = require('express')
-const {
+import { Router } from 'express';
+import {
   create,
   edit,
   remove,
   all
-} = require('../controllers/admin')
-const upload = require('../util/multer')
+} from '../controllers/admin'
+import upload from "../util/multer";
 require('dotenv').config()
 
 const router = Router()
@@ -30,4 +30,4 @@ router.put('/:id', upload.array('images', 5), edit)
 router.delete('/:id', remove)
 
 
-module.exports = router
+export default router
