@@ -3,11 +3,6 @@ header {
     background: #FFFBEB;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
 .container {
     width: 74%;
     height: 101px;
@@ -18,12 +13,15 @@ body {
 }
 
 .logo {
-    width: 24%;
-    height: 56px;
     display: flex;
     align-items: center;
+    width: 26%;
     font-size: 37.33px;
     color: #BB2929;
+}
+
+.logo__text {
+    margin-left: 12px;
 }
 
 .menu {

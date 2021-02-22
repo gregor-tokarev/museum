@@ -1,85 +1,62 @@
 .toys_block {
     width: 100%;
     height: 2009px;
-    
-}
-.fst_row{
-    margin-top: 124px;
-    width: 100%;
-    height: 509px;
-    display: flex;
-    justify-content: center;
 }
 
-.other_rows{
+.row {
     margin-top: 75px;
     width: 100%;
-    height: 509px;
     display: flex;
     justify-content: center;
-
 }
 
-.toy{
+.row:first-child {
+    margin-top: 125px;
+}
+
+.toy {
     width: 21.8%;
     height: 509px;
     margin-left: 3%;
     background: #FFFBEB;
     border-radius: 10px;
+    overflow: hidden;
 }
 
-.toy_ph{
-    height: 201px;
+.toy_ph {
+    height: 200px;
     width: 100%;
-    background: url(.jpg), #C4C4C4;
+    background: #C4C4C4;
 }
 
-.toy_rarity{
-    margin-top: 32px;
-    margin-left: 6.5%;
-    height: 14px;
-    width: 9.8%;
+.toy_body {
+    padding: 37px 27px 16px;
+}
+
+.toy_rarity {
     color: #ED4040;
-    font-family: Roboto;
     font-size: 12px;
 }
 
-.toy_name{
-    font-family: Roboto;
+.toy_name {
     height: 28px;
     font-size: 24px;
     color: #000000;
-    margin-left: 6.5%;
     width: 83.5%;
-
 }
 
-.toy_descr{
-    margin-left: 6.5%;
-    margin-top: 12px;
-    font-family: Roboto;
+.toy_descr {
+    padding-top: 12px;
+    padding-bottom: 32px;
     font-size: 12px;
     height: 135px;
     color: #000000;
 }
 
-.look_butt{
-    margin-left: 6.5%;
-    margin-top: 32px;
-    height: 39px;
-    width: 41.8%;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+.toy_button {
+    cursor: pointer;
+    padding: 5px 45px;
     background: #ED4040;
     border-radius: 5px;
-}
-
-.watch{
-    font-family: Roboto;
-    font-size: 18px;
     color: #FFFFFF;
-    height: 21px;
-    width: 46.8%;
-
 }
