@@ -1,0 +1,48 @@
+.body{
+    display: flex;
+}
+
+.admin_block{
+    width: 19.7%;
+    height: 1107px;
+    background: #FFFBEB;
+}
+
+.admin_panel{
+    padding: 22px 19px 10px;
+    font-size: 36px;
+    color: #000000;
+}
+
+.admin_section{
+    height: 61px;
+    width: 100%;
+    align-items: center;
+    font-size: 18px;
+    color: #ED4040;
+    transition: color 0.2s;
+}
+
+.admin_section_ch{
+    height: 61px;
+    width: 100%;
+    align-items: center;
+    font-size: 18px;
+    color: #ED4040;
+    background: rgba(207, 207, 207, 0.3);
+}
+
+.section_name{
+    padding-left: 19px;
+
+}
+
+.admin_section:hover {
+    color: #BB2929;
+}
+
+.soon{
+    padding: 457px 190px;
+    color: #979797;
+    font-size: 144px;
+}

@@ -1,0 +1,67 @@
+.add_block{
+    padding: 65px 127px;
+}
+
+.toy2{
+    font-size: 48px;
+    padding-bottom: 28px;
+}
+
+.form_names{
+    font-size: 18px;
+}
+
+.name_form{
+    height: 38px;
+    width: 506px;
+    padding-bottom: 20px;
+    padding-top: 6px;
+    border-radius: 3px;
+    border: 1px solid #979797;
+    outline: none;
+}
+
+.rarity_form{
+    height: 22px;
+    width: 172px;
+    padding-bottom: 20px;
+    padding-top: 6px;
+    border-radius: 5px;
+    border: 1px solid #979797;
+    outline: none;
+    font-size: 12px;
+}
+
+.rarity2{
+    padding: 5px 4px;
+
+}
+
+.descr_form{
+    height: 283px;
+    width: 548px;
+    border: 1px solid #979797;
+    padding-bottom: 21px;
+    padding-top: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.photo_form{
+    width: 628px;
+    height: 158px;
+    padding-bottom: 36px;
+}
+
+.subm{
+    background: #ED4040;
+    font-size: 18px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    width: 175px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

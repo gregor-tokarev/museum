@@ -41,7 +41,3 @@ header {
 .menu__item:hover {
     color: #BB2929;
 }
-
-a {
-    text-decoration: none;
-}
