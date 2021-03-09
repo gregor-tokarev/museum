@@ -38,7 +38,16 @@
                 </select>
                 <div class="form_names">Описание</div>
                 <textarea name="description" class="descr_form" required></textarea>
-                <input type="file" name="toy_ph" accept="image/*" class="photo_form" required>
+                <label class="photo_label" for="ph">
+                    <div class="photo_placehl"><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 7H52.5V31.5H59.5V7C59.5 3.1395 56.3605 0 52.5 0H7C3.1395 0 0 3.1395 0 7V49C0 52.8605 3.1395 56 7 56H35V49H7V7Z" fill="#979797"/>
+                        <path d="M21 28L10.5 42H49L35 21L24.5 35L21 28Z" fill="#979797"/>
+                        <path d="M59.5 38.5H52.5V49H42V56H52.5V66.5H59.5V56H70V49H59.5V38.5Z" fill="#979797"/>
+                        </svg>
+                    </div>
+                    <div class="photo_text">Кликните или перетащите игрушки</div>
+                </label>
+                <input type="file" name="toy_ph" accept="image/*" class="photo_form" required id="ph">
                 <input type="submit" class="subm" value="Добавить">
             </form>
         </div>

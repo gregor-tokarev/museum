@@ -47,10 +47,25 @@
     outline: none;
 }
 
-.photo_form{
+.photo_label{
     width: 628px;
     height: 158px;
     padding-bottom: 36px;
+}
+
+.photo_form{
+    display: none;
+}
+
+.photo_placehl{
+    padding-top: 26px;
+    padding-left: 273px;
+}
+
+.photo_text{
+    padding: 8px 156px;
+    font-size: 18px;
+    color: #979797;
 }
 
 .subm{
