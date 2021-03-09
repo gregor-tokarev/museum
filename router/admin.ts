@@ -23,7 +23,18 @@ router.all('*', (req, res, next) => {
 
 router.post('/', upload.array('images', 5), create)
 
-router.get('/', all)
+router.get('/create', (req, res) => {
+  res.render('admin/add_toy')
+})
+
+router.get('/analysis', (req, res) => {
+  res.render('admin/analysis')
+})
+
+router.get('/:id/edit', (req, res) => {
+  const id = req.params.id
+  res.render('admin/edit')
+})
 
 router.put('/:id', upload.array('images', 5), edit)
 
