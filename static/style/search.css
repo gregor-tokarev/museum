@@ -5,10 +5,9 @@
 }
 
 .search_h {
-    width: 36.64%;
     height: 56px;
+    text-align: center;
     padding-top: 155px;
-    margin-left: 33.17%;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -16,13 +15,12 @@
 }
 
 .search_form {
-    width: 40%;
+    width: 56%;
     height: 63px;
-    margin-left: 30%;
-    margin-top: 43px;
     background: #FFFFFF;
     border-radius: 40px;
     display: flex;
+    margin: 40px auto 0;
 }
 
 .text {

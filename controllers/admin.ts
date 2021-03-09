@@ -16,7 +16,7 @@ export const create: RequestHandler = async (req, res) => {
     const toy = new Toy(title, desc, status, files)
     await toy.save()
 
-    res.status(201).render('admin/create', {toy})
+    res.status(201).render('add_toy', {toy})
 }
 
 export const remove: RequestHandler = async (req, res) => {
@@ -50,5 +50,5 @@ export const edit: RequestHandler = async (req, res) => {
 
 export const all: RequestHandler = async (req, res) => {
     const toys = Toy.search('')
-    res.render('admin/index', {toys})
+    res.render('admin/all_toys', {toys})
 }

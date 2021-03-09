@@ -1,17 +1,17 @@
-.add_block{
+.add_block {
     padding: 65px 127px;
 }
 
-.toy2{
+.toy2 {
     font-size: 48px;
     padding-bottom: 28px;
 }
 
-.form_names{
+.form_names {
     font-size: 18px;
 }
 
-.name_form{
+.name_form {
     height: 38px;
     width: 506px;
     padding-bottom: 20px;
@@ -78,5 +78,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }

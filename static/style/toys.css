@@ -1,8 +1,3 @@
-.toys_block {
-    width: 100%;
-    height: 2009px;
-}
-
 .row {
     margin-top: 75px;
     width: 100%;
@@ -10,14 +5,19 @@
     justify-content: center;
 }
 
+.toys_block {
+    margin-top: 135px;
+    display: grid;
+    row-gap: 75px;
+    column-gap: 50px;    
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .row:first-child {
     margin-top: 125px;
 }
 
 .toy {
-    width: 21.8%;
-    height: 509px;
-    margin-left: 3%;
     background: #FFFBEB;
     border-radius: 10px;
     overflow: hidden;
@@ -49,7 +49,6 @@
     padding-top: 12px;
     padding-bottom: 32px;
     font-size: 12px;
-    height: 135px;
     color: #000000;
 }
 
