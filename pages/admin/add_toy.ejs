@@ -7,38 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style/analysis.css">
     <link rel="stylesheet" href="/static/style/main.css">
-    <link rel="stylesheet" href="/static/style/add_toys.css">
+    <link rel="stylesheet" href="/static/style/add_toy.css">
     <title>Админ панель</title>
 </head>
 
 <body>
     <div class="body">
-        <div class="admin_block">
-            <div class="admin_panel">Админ Панель</div>
-            <div class="admin_section">
-                <a class="section_name" href="#">Список игрушек</a>
-            </div>
-            <div class="admin_section_ch">
-                <a class="section_name" href="#">Добавить Игрушку</a>
-            </div>
-            <div class="admin_section_">
-                <a class="section_name" href="#">Аналитика</a>
-            </div>
-        </div>
+        <%- include('../blocks/admin_panel.ejs', {activeTab: 'add'})%>
         <div class="add_block">
             <div class="toy2">Игрушка</div>
-            <form enctype="multipart/form-data" method="post">
-                <div class="form_names" required>Игрушка</div>
-                <input name="toy" clas="name_form">
+            <form enctype="multipart/form-data" method="POST">
+                <div class="form_names" required>Название</div>
+                <input name="toy" class="name_form">
                 <div class="form_names">Редкость</div>
                 <select class="rarity_form" required>
-                    <option value="rare" class="rarity2">редкая</option>
-                    <option value="very rare" class="rarity2">очень редкая</option>
-                    <option value="for bastards" class="rarity2">для опущенных</option>
+                    <option value="rare" checked>редкая</option>
+                    <option value="very rare">очень редкая</option>
+                    <option value="for bastards">для опущенных</option>
                 </select>
                 <div class="form_names">Описание</div>
                 <textarea name="description" class="descr_form" required></textarea>
-                <label class="photo_label" for="ph">
+                <label for="ph">
+                    <div class="photo_label">
                     <div class="photo_placehl"><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 7H52.5V31.5H59.5V7C59.5 3.1395 56.3605 0 52.5 0H7C3.1395 0 0 3.1395 0 7V49C0 52.8605 3.1395 56 7 56H35V49H7V7Z" fill="#979797"/>
                         <path d="M21 28L10.5 42H49L35 21L24.5 35L21 28Z" fill="#979797"/>
@@ -46,6 +36,7 @@
                         </svg>
                     </div>
                     <div class="photo_text">Кликните или перетащите игрушки</div>
+                    </div>
                 </label>
                 <input type="file" name="toy_ph" accept="image/*" class="photo_form" required id="ph">
                 <input type="submit" class="subm" value="Добавить">

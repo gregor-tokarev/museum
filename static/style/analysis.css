@@ -3,7 +3,6 @@
 }
 
 .admin_block {
-    width: 380px;
     height: 100vh;
     background: #FFFBEB;
 }
@@ -34,7 +33,8 @@
 }
 
 .soon{
-    padding: 457px 190px;
+    padding-top: 457px;
+    padding-left: 183px;
     color: #979797;
     font-size: 144px;
 }
