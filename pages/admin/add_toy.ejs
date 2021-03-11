@@ -16,17 +16,17 @@
         <%- include('../blocks/admin_panel.ejs', {activeTab: 'add'})%>
         <div class="add_block">
             <div class="toy2">Игрушка</div>
-            <form enctype="multipart/form-data" method="POST">
+            <form enctype="multipart/form-data" action="/admin" method="POST">
                 <div class="form_names" required>Название</div>
-                <input name="toy" class="name_form">
+                <input name="title" class="name_form">
                 <div class="form_names">Редкость</div>
-                <select class="rarity_form" required>
+                <select  class="rarity_form" required>
                     <option value="rare" checked>редкая</option>
                     <option value="very rare">очень редкая</option>
                     <option value="for bastards">для опущенных</option>
                 </select>
                 <div class="form_names">Описание</div>
-                <textarea name="description" class="descr_form" required></textarea>
+                <textarea name="desc" class="descr_form" required></textarea>
                 <label for="ph">
                     <div class="photo_label">
                     <div class="photo_placehl"><svg width="70" height="67" viewBox="0 0 70 67" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@
                     <div class="photo_text">Кликните или перетащите игрушки</div>
                     </div>
                 </label>
-                <input type="file" name="toy_ph" accept="image/*" class="photo_form" required id="ph">
+                <input type="file" name="images" multiple accept="image/*" class="photo_form" id="ph">
                 <input type="submit" class="subm" value="Добавить">
             </form>
         </div>

@@ -1,0 +1,25 @@
+.toy_block{
+    padding-top: 140px;
+}
+
+.toy_info{
+    padding: 60px 65px 0;
+
+}
+
+.toy_rar{
+    font-size: 18px;
+    color: #ED4040;
+    padding-bottom: 6px;
+
+}
+
+.name_toy{
+    font-weight: 500;
+    font-size: 48px;
+    margin: 0 0 40px 0;
+}
+
+.toy_descr{
+    font-size: 24px;
+}

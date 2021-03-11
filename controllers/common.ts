@@ -10,6 +10,10 @@ export const search: RequestHandler = async (req, res) => {
 
 export const toy: RequestHandler = async (req, res) => {
   const id = req.params.id
-  const toy = await Toy.getById(id)
-  res.status(200).render('toy', {toy})
+  try {
+    const toy = await Toy.getById(id)
+    res.status(200).render('toy', {toy})
+  } catch (error) {
+    console.error(error)
+  }
 }

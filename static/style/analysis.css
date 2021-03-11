@@ -4,6 +4,7 @@
 
 .admin_block {
     height: 100vh;
+    min-width: 380px;
     background: #FFFBEB;
 }
 

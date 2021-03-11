@@ -13,10 +13,12 @@ export const create: RequestHandler = async (req, res) => {
         const fl: Express.Multer.File[] = req.files as Express.Multer.File[]
         files = fl.map(img => '/' + img.path)
     }
+    console.log(req.body);
+    
     const toy = new Toy(title, desc, status, files)
     await toy.save()
 
-    res.status(201).render('add_toy', {toy})
+    res.status(201).render('admin/add_toy', {toy})
 }
 
 export const remove: RequestHandler = async (req, res) => {

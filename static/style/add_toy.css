@@ -1,5 +1,7 @@
 .add_block {
-    padding: 65px 127px;
+    max-width: 960px;
+    margin: 0 auto;
+    flex-grow: 1;
 }
 
 .toy2 {
@@ -14,8 +16,8 @@
 }
 
 .name_form{
-    height: 38px;
-    width: 506px;
+    width: 100%;
+    padding: 10px;
     border-radius: 3px;
     border: 1px solid #979797;
     outline: none;
@@ -30,18 +32,23 @@
     font-size: 12px;
 }
 
-.descr_form{
-    height: 283px;
-    width: 548px;
+.descr_form {
+    width: 100%;
+    padding: 10px 20px;
     border: 1px solid #979797;
+    border-radius: 3px;
     font-size: 14px;
     outline: none;
+    resize: vertical;
 }
 
 .photo_label{
-    width: 628px;
-    height: 158px;
-    border: 2px dashed #979797;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    border: 2px solid #979797;
     border-radius: 10px;
     margin-top: 21px;
     cursor: pointer;
@@ -51,18 +58,12 @@
     display: none;
 }
 
-.photo_placehl{
-    padding-top: 26px;
-    padding-left: 273px;
-}
-
 .photo_text{
-    padding: 8px 156px;
     font-size: 18px;
     color: #979797;
 }
 
-.subm{
+.subm {
     margin-top: 36px;
     background: #ED4040;
     font-size: 18px;

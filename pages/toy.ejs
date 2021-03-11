@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/header.css">
+    <link rel="stylesheet" href="/static/style/toy.css">
+    <link rel="stylesheet" href="/static/style/main.css">
+    <title>Главная</title>
+</head>
+
+<body>
+    <%- include('blocks/header.ejs')%>
+    <div class="body container toy_block">
+    <div class="body"></div>
+    <div class="toy_info">
+        <div class="toy_rar"><%=toy.status%></div>
+        <h1 class="name_toy"><%=toy.title%></h1>
+        <p class="toy_descr">
+            <%= toy.desc%>   
+        </p>
+    </div>
+    </div>
+</body>
+
+</html>
