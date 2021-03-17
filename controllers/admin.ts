@@ -8,12 +8,12 @@ export const create: RequestHandler = async (req, res) => {
         desc,
         status,
     } = req.body
+    
     let files: string[] = []
     if (req.files) {
         const fl: Express.Multer.File[] = req.files as Express.Multer.File[]
         files = fl.map(img => '/' + img.path)
     }
-    console.log(req.body);
     
     const toy = new Toy(title, desc, status, files)
     await toy.save()

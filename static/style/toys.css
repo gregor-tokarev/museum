@@ -58,4 +58,24 @@
     background: #ED4040;
     border-radius: 5px;
     color: #FFFFFF;
+    font-size: 18px;
+}
+
+.buttons_block{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.edit_button{
+    padding: 9px 12.5px;
+    background:#45BA66;
+    display: block;
+}
+
+.delete_button{
+    padding: 9px 12.5px;
+    background:#ED4040;
+    border: 0;
+    outline: 0;
 }

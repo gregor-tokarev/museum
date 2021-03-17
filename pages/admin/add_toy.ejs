@@ -16,11 +16,11 @@
         <%- include('../blocks/admin_panel.ejs', {activeTab: 'add'})%>
         <div class="add_block">
             <div class="toy2">Игрушка</div>
-            <form enctype="multipart/form-data" action="/admin" method="POST">
+            <form enctype="multipart/form-data" action="/admin?pass=<%= ADIMN_PASSWORD%>" method="POST">
                 <div class="form_names" required>Название</div>
                 <input name="title" class="name_form">
                 <div class="form_names">Редкость</div>
-                <select  class="rarity_form" required>
+                <select name="status" class="rarity_form" required>
                     <option value="rare" checked>редкая</option>
                     <option value="very rare">очень редкая</option>
                     <option value="for bastards">для опущенных</option>

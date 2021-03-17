@@ -10,7 +10,7 @@ require('dotenv').config()
 
 const router = Router()
 
-router.all('*', (req, res, next) => {
+router.use('*', (req, res, next) => {
   const {pass} = req.query
   if (pass === process.env.ADMIN_PASSWORD) {
     res.locals.ADIMN_PASSWORD = pass
