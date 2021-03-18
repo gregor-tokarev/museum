@@ -19,7 +19,9 @@
                 <%toys.forEach(toy => {%>
                     <div class="toy">
                         <div class="toy_ph">
-                            <%= toy.images%>
+                            <%if(toy.images.length) {%>
+                                <img src="<%= toy.images[0]%>" alt="">
+                            <%}%>
                         </div>
                         <div class="toy_body">
                             <div class="toy_rarity"><%= toy.status%></div>
