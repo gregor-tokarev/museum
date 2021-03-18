@@ -29,7 +29,7 @@
     color: inherit;
 }
 
-.admin_section:hover {
+.admin_section:not(.admin_section_ch):hover {
     color: #BB2929;
 }
 
