@@ -23,3 +23,35 @@
 .toy_descr{
     font-size: 24px;
 }
+
+.mini_block{
+  padding-top: 36px;
+  flex-grow: 1;
+}
+
+.mini_image{
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+    background: rgba(207, 207, 207, 0.3);
+}
+
+.mini_container{
+    width: 78px;
+    height: 78px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ED4040;
+    border-radius: 6px;
+}
+
+.mini_image_ch{
+    padding: 0;
+}
+
+.norm_image{
+    background: rgba(207, 207, 207, 0.3);
+    padding-left: 23px;
+}
+
