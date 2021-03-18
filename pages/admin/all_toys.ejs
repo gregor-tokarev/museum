@@ -28,15 +28,19 @@
                     </label>              
                    </button>
                 </form> 
-                <div class="toys_list"> 
+                <div class="toys_list">
+                    <% toys.forEach(toy => {%>
                     <div class="toy">
-                        <div class="toy_ph"></div>
+                        <div class="toy_ph">
+                            <%if(toy.images.length) {%>
+                            <img src="<%=toy.images[0]%>" alt="">
+                            <%}%>
+                        </div>
                         <div class="toy_body">
-                            <div class="toy_rarity">Редкая</div>
-                            <div class="toy_name">Игрушка</div>
+                            <div class="toy_rarity"><%=toy.status%></div>
+                            <div class="toy_name"><%= toy.title%></div>
                             <div class="toy_descr">
-                                Это безусловно очень интересная игрушка, на которую хотят посмотреть сороколетние мужчины, которым безусловно есть чем заняться, например побулькать. Это безусловно очень интересная игрушка, на которую хотят посмотреть сороколетние мужчины, которым безусловно
-                                есть чем заняться, например побулькать. Это безусловно очень интересная игрушка, на которую хотят посмотреть сороколетние мужчины, которым безусловно есть чем заняться, например побулькать.
+                                <%= toy.title%>
                             </div>
                             <div class="buttons_block">
                                 <a class="toy_button edit_button" href="#">Редактировать</a>
@@ -46,40 +50,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="toy">
-                        <div class="toy_ph"></div>
-                        <div class="toy_body">
-                            <div class="toy_rarity">Редкая</div>
-                            <div class="toy_name">Игрушка</div>
-                            <div class="toy_descr">
-                                Это безусловно очень интересная игрушка, на которую хотят посмотреть сороколетние мужчины, которым безусловно есть чем заняться, например побулькать. Это безусловно очень интересная игрушка, на которую хотят посмотреть сороколетние мужчины, которым безусловно
-                                есть чем заняться, например побулькать. Это безусловно очень интересная игрушка, на которую хотят посмотреть сороколетние мужчины, которым безусловно есть чем заняться, например побулькать.
-                            </div>
-                            <div class="buttons_block">
-                                <a class="toy_button edit_button" href="#">Редактировать</a>
-                                <form method="POST">
-                                    <button class="toy_button delete_button">Удалить</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="toy">
-                        <div class="toy_ph"></div>
-                        <div class="toy_body">
-                            <div class="toy_rarity">Редкая</div>
-                            <div class="toy_name">Игрушка</div>
-                            <div class="toy_descr">
-                                Это безусловно очень интересная игрушка, на которую хотят посмотреть сороколетние мужчины, которым безусловно есть чем заняться, например побулькать. Это безусловно очень интересная игрушка, на которую хотят посмотреть сороколетние мужчины, которым безусловно
-                                есть чем заняться, например побулькать. Это безусловно очень интересная игрушка, на которую хотят посмотреть сороколетние мужчины, которым безусловно есть чем заняться, например побулькать.
-                            </div>
-                            <div class="buttons_block">
-                                <a class="toy_button edit_button" href="#">Редактировать</a>
-                                <form method="POST">
-                                    <button class="toy_button delete_button">Удалить</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                    <%})%>
                 </div>
             </div>
         </div>

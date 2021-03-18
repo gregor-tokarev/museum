@@ -24,9 +24,13 @@
 }
 
 .toy_ph {
-    height: 200px;
     width: 100%;
+    min-height: 200px;
     background: #C4C4C4;
+}
+
+.toy_ph img {
+    max-width: 100%;
 }
 
 .toy_body {
