@@ -13,8 +13,8 @@ const router = Router()
 router.use('*', (req, res, next) => {
   const {pass} = req.query
   if (pass === process.env.ADMIN_PASSWORD) {
-    res.locals.ADIMN_PASSWORD = pass
-    next()
+  res.locals.ADIMN_PASSWORD = pass
+  next()
   } else {
     res.send('<h1>Не пущу</h1>')
   }

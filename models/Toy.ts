@@ -32,6 +32,6 @@ export default class Toy implements IToy {
     const toys = query === '' ?
       collection.find() :
       collection.find({$text: {$search: query}})
-      return await toys.toArray() as IToy[]
+    return await toys.toArray() as IToy[]
   }
 }

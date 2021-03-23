@@ -29,28 +29,8 @@
                    </button>
                 </form> 
                 <div class="toys_list">
-                    <% toys.forEach(toy => {%>
-                    <div class="toy">
-                        <div class="toy_ph">
-                            <%if(toy.images.length) {%>
-                            <img src="<%=toy.images[0]%>" alt="">
-                            <%}%>
-                        </div>
-                        <div class="toy_body">
-                            <div class="toy_rarity"><%=toy.status%></div>
-                            <div class="toy_name"><%= toy.title%></div>
-                            <div class="toy_descr">
-                                <%= toy.title%>
-                            </div>
-                            <div class="buttons_block">
-                                <a class="toy_button edit_button" href="#">Редактировать</a>
-                                <form method="POST">
-                                    <button class="toy_button delete_button">Удалить</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <%})%>
+                    <%=toys%>
+
                 </div>
             </div>
         </div>
