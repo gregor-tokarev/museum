@@ -8,13 +8,13 @@ export const create: RequestHandler = async (req, res) => {
         desc,
         status,
     } = req.body
-    
+
     let files: string[] = []
     if (req.files) {
         const fl: Express.Multer.File[] = req.files as Express.Multer.File[]
         files = fl.map(img => '/' + img.path)
     }
-    
+
     const toy = new Toy(title, desc, status, files)
     await toy.save()
 
@@ -51,11 +51,10 @@ export const edit: RequestHandler = async (req, res) => {
 }
 
 export const all: RequestHandler = async (req, res) => {
-    // const query: string = '' 
-    // req.query.search_query as string || ''
-    
-    // const toys = await Toy.search(query)
-    
-    
-    res.status(200).render('admin/all_toys', {toys: 'sdflj'})
+    const query: string = req.query.search_query as string || ''
+
+    const toys = await Toy.search(query)
+
+
+    res.status(200).render('admin/all_toys', {toys})
 }

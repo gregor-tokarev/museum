@@ -27,9 +27,7 @@ router.get('/create', (req, res) => {
   res.render('admin/add_toy')
 })
 
-router.get('/', (req, res) => {
-  res.render('admin/all_toys')
-})
+router.get('/', all)
 
 router.get('/analysis', (req, res) => {
   res.render('admin/analysis')
