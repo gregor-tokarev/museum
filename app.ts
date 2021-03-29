@@ -20,7 +20,7 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/pages'))
 
 // routes
-app.get('', commonRouter)
+app.use('/', commonRouter)
 app.use('/admin', adminRouter)
 
 // connect to database and run app

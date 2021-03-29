@@ -3,27 +3,25 @@ header {
     background: #FFFBEB;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 74%;
+.header__container {
+    padding: 0 20px;
     height: 101px;
-    margin-left: 12%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    width: 24%;
-    height: 56px;
     display: flex;
     align-items: center;
     font-size: 37.33px;
     color: #BB2929;
+}
+
+.logo__text {
+    margin-left: 12px;
 }
 
 .menu {
@@ -42,8 +40,4 @@ body {
 
 .menu__item:hover {
     color: #BB2929;
-}
-
-a {
-    text-decoration: none;
 }

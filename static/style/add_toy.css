@@ -1,0 +1,81 @@
+.add_block {
+    max-width: 960px;
+    margin: 0 auto;
+    flex-grow: 1;
+    padding-top: 65px;
+}
+
+.toy2 {
+    font-size: 48px;
+    padding-bottom: 8px;
+}
+
+.form_names {
+    font-size: 18px;
+    padding-bottom: 6px;
+    padding-top: 20px;
+}
+
+.name_form{
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #979797;
+    outline: none;
+}
+
+.rarity_form{
+    height: 22px;
+    width: 172px;
+    border-radius: 5px;
+    border: 1px solid #979797;
+    outline: none;
+    font-size: 12px;
+}
+
+.descr_form {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #979797;
+    border-radius: 3px;
+    font-size: 14px;
+    outline: none;
+    resize: vertical;
+}
+
+.photo_label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    border: 2px solid #979797;
+    border-radius: 10px;
+    margin-top: 21px;
+    cursor: pointer;
+}
+
+.photo_form{
+    display: none;
+}
+
+.photo_text{
+    font-size: 18px;
+    color: #979797;
+}
+
+.subm {
+    margin-top: 36px;
+    background: #ED4040;
+    font-size: 18px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    width: 175px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

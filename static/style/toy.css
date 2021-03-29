@@ -1,0 +1,57 @@
+.toy_block{
+    padding-top: 140px;
+}
+
+.toy_info{
+    padding: 60px 65px 0;
+
+}
+
+.toy_rar{
+    font-size: 18px;
+    color: #ED4040;
+    padding-bottom: 6px;
+
+}
+
+.name_toy{
+    font-weight: 500;
+    font-size: 48px;
+    margin: 0 0 40px 0;
+}
+
+.toy_descr{
+    font-size: 24px;
+}
+
+.mini_block{
+  padding-top: 26px;
+}
+
+.mini_image{
+    width: 60px;
+    height: 60px;
+    background: rgba(207, 207, 207, 0.3);
+    margin: 10px 0 10px 10px;
+}
+
+.mini_container{
+    width: 80px;
+    height: 80px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ED4040;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+.mini_image_ch{
+    margin: 0;
+}
+
+.norm_image{
+    background: rgba(207, 207, 207, 0.3);
+    margin-left: 23px;
+}
+
