@@ -14,7 +14,7 @@
     font-size: 48px;
 }
 
-.search_form2 {
+.search_form2 { 
     display: block;
     height: 63px;
     background: #FFFFFF;
@@ -50,3 +50,7 @@
     column-gap: 50px;
     margin-top: 50px;    
 }
+
+
+
+

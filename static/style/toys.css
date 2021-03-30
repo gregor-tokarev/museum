@@ -40,7 +40,7 @@
 .toy_rarity {
     color: #ED4040;
     font-size: 12px;
-}
+} 
 
 .toy_name {
     height: 28px;
@@ -75,11 +75,18 @@
     padding: 9px 12.5px;
     background:#45BA66;
     display: block;
+    text-align: center;
+    flex-basis: 43%;
 }
 
 .delete_button{
+    width: 100%;
     padding: 9px 12.5px;
     background:#ED4040;
     border: 0;
     outline: 0;
+}
+
+.button_form{
+    flex-basis: 43%
 }

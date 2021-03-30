@@ -42,7 +42,12 @@
                             <div class="toy_descr">
                                 <%= toy.desc%>
                             </div>
-                            <a class="toy_button" href="/toy/<%= toy._id%>">Смотреть</a>
+                            <div class="buttons_block">
+                                <a href="#" class="toy_button edit_button">Редактировать</a>
+                                <form class="button_form">
+                                    <button class="toy_button delete_button">Удалить</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <%})%>
