@@ -44,7 +44,7 @@
                             </div>
                             <div class="buttons_block">
                                 <a href="#" class="toy_button edit_button">Редактировать</a>
-                                <form class="button_form">
+                                <form class="button_form" method="post" action="/admin/delete/<%= toy._id%>?pass=<%=ADIMN_PASSWORD%>">
                                     <button class="toy_button delete_button">Удалить</button>
                                 </form>
                             </div>

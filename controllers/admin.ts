@@ -24,7 +24,8 @@ export const create: RequestHandler = async (req, res) => {
 export const remove: RequestHandler = async (req, res) => {
     const id = req.params.id
     await Toy.deleteById(id)
-    res.status(200).render('admin/toys')
+    const {ADMIN_PASSWORD} = process.env
+    res.redirect(`/admin/?pass=${ADMIN_PASSWORD}`)
 }
 
 export const edit: RequestHandler = async (req, res) => {
@@ -54,6 +55,7 @@ export const all: RequestHandler = async (req, res) => {
     const query: string = req.query.search_query as string || ''
 
     const toys = await Toy.search(query)
+    console.log(toys)
 
 
     res.status(200).render('admin/all_toys', {toys})

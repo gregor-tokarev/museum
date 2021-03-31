@@ -20,6 +20,9 @@ router.use('*', (req, res, next) => {
   }
 })
 
+router.post('/delete/:id', remove)
+
+router.post('/edit/:id', upload.array('images', 5), edit)
 
 router.post('/', upload.array('images', 5), create)
 
@@ -38,9 +41,7 @@ router.get('/:id/edit', (req, res) => {
   res.render('admin/edit')
 })
 
-router.put('/:id', upload.array('images', 5), edit)
 
-router.delete('/:id', remove)
 
 
 export default router
