@@ -29,6 +29,7 @@ export default class Toy implements IToy {
 
   static async search(query: string): Promise<IToy[]> {
     const collection = get().collection('toys')
+    
     const toys = query === '' ?
       collection.find() :
       collection.find({$text: {$search: query}})
