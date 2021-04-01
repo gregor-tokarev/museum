@@ -1,6 +1,8 @@
 .all_toys{
     padding: 65px 127px;
     flex-grow: 1;
+    overflow-y: auto;
+    max-height: 100vh;
 }
 
 
@@ -48,7 +50,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 75px;
     column-gap: 50px;
-    margin-top: 50px;    
+    margin-top: 50px;
 }
 
 

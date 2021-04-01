@@ -9,6 +9,10 @@
     background: #FFFBEB;
 }
 
+body {
+    overflow: hidden;
+}
+
 .admin_panel {
     padding: 22px 19px 10px;
     font-size: 36px;
