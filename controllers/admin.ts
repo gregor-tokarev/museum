@@ -55,7 +55,6 @@ export const all: RequestHandler = async (req, res) => {
     const query: string = req.query.search_query as string || ''
 
     const toys = await Toy.search(query)
-    console.log(toys)
 
 
     res.status(200).render('admin/all_toys', {toys})
