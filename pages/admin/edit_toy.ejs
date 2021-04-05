@@ -17,9 +17,9 @@
     <div class="add_block">
         <div class="inner">
             <div class="toy2">Игрушка</div>
-            <form enctype="multipart/form-data" action="/admin?pass=<%= ADMIN_PASSWORD %>" method="POST">
+            <form enctype="multipart/form-data" action="/admin/edit/<%= toy._id%>?pass=<%= ADMIN_PASSWORD %>" method="POST">
                 <div class="form_names" required>Название</div>
-                <input name="title" class="name_form">
+                <input name="title" class="name_form" value="<%= toy.title%>">
                 <div class="form_names">Редкость</div>
                 <select name="status" class="rarity_form" required>
                     <option value="редкая" checked>редкая</option>
@@ -27,7 +27,7 @@
                     <option value="обычная">обычная</option>
                 </select>
                 <div class="form_names">Описание</div>
-                <textarea name="desc" class="descr_form" required></textarea>
+                <textarea name="desc" class="descr_form" required><%= toy.desc%></textarea>
                 <label for="ph" id="ph_label">
                     <div class="photo_label">
                         <div class="photo_container"></div>
@@ -44,7 +44,7 @@
                     </div>
                 </label>
                 <input type="file" name="images" multiple accept="image/*" class="photo_form" id="ph">
-                <input type="submit" class="subm" value="Добавить">
+                <input type="submit" class="subm" value="Редактировать">
             </form>
         </div>
     </div>

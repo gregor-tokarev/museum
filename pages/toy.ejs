@@ -7,32 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style/header.css">
     <link rel="stylesheet" href="/static/style/toy.css">
-    <link rel="stylesheet" href="/static/style/analysis.css">
     <link rel="stylesheet" href="/static/style/main.css">
     <title>Главная</title>
 </head>
 
 <body>
-    <%- include('blocks/header.ejs')%>
-    <div class="body container toy_block">
-    <div class="body">
+<%- include('blocks/header.ejs') %>
+<div class="body container toy_block">
+    <div class="body toy_imgs">
         <div class="mini_block">
-            <div class="mini_container">
-                <div class="mini_image mini_image_ch"> <img src="" alt=""></div>
-            </div>
-            <div class="mini_image"><img src=""  alt=""></div>
-            <div class="mini_image"><img src="" alt=""></div>
+            <% toy.images.forEach((url, index) => { %>
+                <div class="mini_container <%= index === 0 ? 'mini_container--active' : ''%>">
+                    <div class="mini_image mini_image_ch"><img src="<%= url%>" alt=""></div>
+                </div>
+            <% }) %>
         </div>
-        <div class="norm_image"><img src="" alt=""></div>
+        <div class="norm_image"><img src="<%= toy.images[0]%>" alt=""></div>
     </div>
     <div class="toy_info">
-        <div class="toy_rar"><%=toy.status%></div>
-        <h1 class="name_toy"><%=toy.title%></h1>
+        <div class="toy_rar"><%= toy.status %></div>
+        <h1 class="name_toy"><%= toy.title %></h1>
         <p class="toy_descr">
-            <%= toy.desc%>   
+            <%= toy.desc %>
         </p>
     </div>
-    </div>
+</div>
+
+<script defer src="/static/js/toy.js"></script>
 </body>
 
-</html>  
+</html>

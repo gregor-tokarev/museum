@@ -18,7 +18,7 @@ export const create: RequestHandler = async (req, res) => {
     const toy = new Toy(title, desc, status, files)
     await toy.save()
 
-    res.status(201).render('admin/add_toy', {toy})
+    res.redirect(`/admin?pass=${process.env.ADMIN_PASSWORD}`)
 }
 
 export const remove: RequestHandler = async (req, res) => {
@@ -41,14 +41,17 @@ export const edit: RequestHandler = async (req, res) => {
         status,
     }
 
-    let files: string[] = []
-    if (req.files) {
-        const fl: Express.Multer.File[] = req.files as Express.Multer.File[]
-        files = fl.map(img => '/' + img.path)
+    if (req.files.length) {
+        let files: string[] = []
+        if (req.files) {
+            const fl: Express.Multer.File[] = req.files as Express.Multer.File[]
+            files = fl.map(img => '/' + img.path)
+        }
+        toy.images = files
     }
-    toy.images = files
+    console.log(toy)
     await Toy.updateById(id, toy)
-    res.status(200).render('admin/toy', {toy})
+    res.redirect(`/toy/${id}`)
 }
 
 export const all: RequestHandler = async (req, res) => {
@@ -59,3 +62,14 @@ export const all: RequestHandler = async (req, res) => {
 
     res.status(200).render('admin/all_toys', {toys})
 }
+
+export const toy: RequestHandler = async (req, res) => {
+    const id = req.params.id
+    try {
+        const toy = await Toy.getById(id)
+        res.status(200).render('admin/edit_toy', {toy})
+    } catch (error) {
+        console.error(error)
+    }
+}
+
