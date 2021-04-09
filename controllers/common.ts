@@ -5,8 +5,8 @@ import Toy from "../models/Toy";
 export const search: RequestHandler = async (req, res) => {
   const query: string = req.query.search_query as string || ''
   const toys = await Toy.search(query)
-  
-  res.status(200).render('index', {toys})
+
+  res.status(200).render('list', {toys})
 }
 
 export const toy: RequestHandler = async (req, res) => {

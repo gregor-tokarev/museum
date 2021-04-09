@@ -8,7 +8,11 @@ import {
 
 const router = Router()
 
-router.get('/', search)
+router.get('/', (req, res) => {
+    res.render('index')
+})
+
+router.get('/list', search)
 
 router.get('/toy/:id', toy)
 
