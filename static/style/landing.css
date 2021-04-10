@@ -1,0 +1,57 @@
+.big_photo{
+    height: 880px;
+    background-image: url(https://downloader.disk.yandex.ru/preview/42db9bbb98df169ba5a6e86682aa67746b2645cc2ee0566c8f7f8f62b0f06c3b/60722488/j6vSN3mvKSUwW6u3pW7_03SksF0iRnXLH8znH21FODUc-az1qN7GLRMjjq22YIBxe6anV36_QZg4JrQrmSNkKg%3D%3D?uid=0&filename=F4IbOE_JpKs.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1903x937);
+    background-size: cover;
+}
+
+.photo_text{
+    color: #FFFFFF;
+    font-size: 72px;
+    display: flex;
+    justify-content: center;
+    padding-top: 315px;
+}
+
+.arrow_form{
+    padding-top: 270px;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow_button{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.creator_block{
+    display: flex;
+    padding: 45px 0 60px 0;
+    justify-content: center;
+
+}
+
+.creator_descr{
+    font-size: 18px;
+    padding-right: 100px;
+    width: 665px;
+}
+
+.creator_ph{
+    width: 520px;
+    min-height: 640px;
+    background: #C4C4C4;
+}
+
+.creator_ph img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.some_toys{
+    height: 1360px;
+    background: #BB2929;
+    
+}

@@ -3,6 +3,10 @@ header {
     background: #FFFBEB;
 }
 
+.index_header{
+    background: rgba(255, 255, 255, 0.18);
+}
+
 .header__container {
     padding: 0 20px;
     height: 101px;
