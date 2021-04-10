@@ -30,6 +30,10 @@
     display: flex;
 }
 
+.comments {
+    margin-top: 60px;
+}
+
 .toy_descr{
     font-size: 16px;
 }

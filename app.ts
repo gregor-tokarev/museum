@@ -15,7 +15,9 @@ import commonRouter from './router/common'
 const app = express()
 app.use('/static', gzip(__dirname + '/static', {}))
 app.use('/upload', gzip(__dirname + '/upload', {}))
-app.use(helmet())
+app.use(helmet({
+    contentSecurityPolicy: false,
+}))
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/pages'))
 
