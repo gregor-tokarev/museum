@@ -41,6 +41,7 @@ img {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 form{

@@ -53,5 +53,123 @@
 .some_toys{
     height: 1360px;
     background: #BB2929;
-    
+
+}
+
+.lis{
+    height: 1100px;
+    padding-top: 60px;
+}
+
+.all_t{
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;;
+    padding-bottom: 40px;
+}
+
+.all_b{
+    background: #000000;
+    border-radius: 5px;
+    padding: 9px 24px;
+    font-size: 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+.factory_block{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.factory_pair{}
+
+.factory_pair:first-child{
+    padding-right: 350px;
+}
+
+.factory{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.factory_number{
+    color: #FFFFFF;
+    font-size: 36px;
+}
+
+.factory_descr{
+    padding-left: 16px;
+}
+
+.year{
+    color: #ED4040;
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+.history{
+    color: #000000;
+    font-size: 18px;
+}
+
+.map{
+    height: 590px;
+    background:  #C4C4C4;
+}
+
+footer{
+    padding: 40px 0 0 25%;
+
+}
+
+.contacts{
+    padding-bottom: 40px;
+    font-size: 48px;
+    color: #000000;
+}
+
+.big_info{
+    display: flex;
+}
+
+.line{
+    display: flex;
+    flex-direction: column;
+}
+
+.line:first-child{
+    padding-right: 110px;
+}
+
+.full{
+    padding-bottom: 40px;
+}
+
+.direct{
+    font-size: 24px;
+    color: #000000;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.for_social{
+    padding-bottom: 10px;
+}
+
+.info{
+    font-size: 24px;
+    color: #000000;
+    padding-left: 10px;
+}
+
+.social{
+    display:flex;
+    padding-left: 10px;
+}
+
+.social a {
+    padding-right: 15px;
 }
