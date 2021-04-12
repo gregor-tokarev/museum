@@ -2,15 +2,14 @@ import {Router} from "express";
 
 import {
   search,
-  toy
+  toy,
+    indexPage
 } from '../controllers/common'
 
 
 const router = Router()
 
-router.get('/', (req, res) => {
-    res.render('index')
-})
+router.get('/', indexPage)
 
 router.get('/list', search)
 
