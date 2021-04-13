@@ -2,11 +2,12 @@
     width: 100%;
     height: 422px;
     background: url(/static/imgs/BeFunky-collage.jpg);
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 .search_h {
     text-align: center;
+    color: #ED4040;
     padding-top: 155px;
     font-family: Roboto;
     font-style: normal;
