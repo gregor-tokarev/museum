@@ -1,5 +1,5 @@
 .big_photo{
-    height: 880px;
+    height: 100vh;
     background-image: url(https://downloader.disk.yandex.ru/preview/42db9bbb98df169ba5a6e86682aa67746b2645cc2ee0566c8f7f8f62b0f06c3b/60722488/j6vSN3mvKSUwW6u3pW7_03SksF0iRnXLH8znH21FODUc-az1qN7GLRMjjq22YIBxe6anV36_QZg4JrQrmSNkKg%3D%3D?uid=0&filename=F4IbOE_JpKs.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1903x937);
     background-size: cover;
 }
@@ -7,9 +7,7 @@
 .photo_text{
     color: #FFFFFF;
     font-size: 72px;
-    display: flex;
-    justify-content: center;
-    padding-top: 315px;
+    text-align: center;
 }
 
 .arrow_form{
