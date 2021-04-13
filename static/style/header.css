@@ -5,6 +5,7 @@ header {
 
 .index_header{
     background: rgba(255, 255, 255, 0.18);
+    position: fixed;
 }
 
 .header__container {
