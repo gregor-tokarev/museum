@@ -2,6 +2,10 @@ import {ObjectId} from 'mongodb'
 import {get} from '../util/dbConnection'
 import {IToy} from '../types/common'
 
+interface searchSettings {
+    limit: number
+}
+
 export default class Toy implements IToy {
   constructor(
       public title: string,
@@ -27,12 +31,12 @@ export default class Toy implements IToy {
       return await get().collection('toys').findOne({_id: new ObjectId(id)}) as IToy
   }
 
-  static async search(query: string): Promise<IToy[]> {
+  static async search(query: string, settings: searchSettings = {limit: 9999999999999}): Promise<IToy[]> {
     const collection = get().collection('toys')
-    
+
     const toys = query === '' ?
-      collection.find() :
-      collection.find({$text: {$search: query}})
+      collection.find().limit(settings.limit) :
+      collection.find({$text: {$search: query}}).limit(settings.limit)
     return await toys.toArray() as IToy[]
   }
 }

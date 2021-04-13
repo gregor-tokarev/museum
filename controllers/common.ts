@@ -18,3 +18,12 @@ export const toy: RequestHandler = async (req, res) => {
     console.error(error)
   }
 }
+
+export const indexPage: RequestHandler = async (req, res) => {
+    try {
+      const toys  = await Toy.search('', {limit: 6})
+        res.status(200).render('index', {toys})
+    } catch (err) {
+      console.error(err)
+    }
+}
