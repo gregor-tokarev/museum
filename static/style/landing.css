@@ -66,6 +66,12 @@ html {
     justify-content: center;
 }
 
+@media (max-width: 960px) {
+    .creator_block {
+        flex-direction: column-reverse;
+    }
+}
+
 .creator_descr{
     font-size: 18px;
     padding-right: 100px;
@@ -112,13 +118,16 @@ html {
 .factory_block{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 40px 0;
 }
 
 .factory_pair{}
 
-.factory_pair:first-child{
-    padding-right: 350px;
+@media (min-width: 960px) {
+    .factory_pair:first-child {
+        margin-right: 350px;
+    }
 }
 
 .factory{
