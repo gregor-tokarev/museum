@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/analysis.css">
+    <link rel="stylesheet" href="/static/style/main.css">
+    <link rel="stylesheet" href="/static/style/all_toys.css">
+    <link rel="stylesheet" href="/static/style/toys.css">
+    <title>Админ панель</title>
+</head>
+
+<body>
+    <div class="body">
+        <%- include('../blocks/admin_panel.ejs', {activeTab: 'list'})%>
+        <div class="all_toys">
+            <div class="toys_container">
+                <div class="all_text">Все игрушки</div>
+                <form name="toy" method="GET" action="/admin">
+                    <label class="search_form2">
+                        <input type="hidden" name="pass" value="<%= ADMIN_PASSWORD%>">
+                        <input placeholder="Игрушка..." class="text2" name="search_query">
+                        <button type="submit" class="button2"><svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.2571 26.5127C16.1984 26.5121 19.0551 25.5275 21.3721 23.7156L28.6568 31L31 28.6569L23.7152 21.3726C25.5281 19.0555 26.5134 16.1983 26.5141 13.2564C26.5141 5.94714 20.5667 0 13.2571 0C5.94745 0 0 5.94714 0 13.2564C0 20.5656 5.94745 26.5127 13.2571 26.5127ZM13.2571 3.31409C18.7405 3.31409 23.1999 7.7732 23.1999 13.2564C23.1999 18.7395 18.7405 23.1986 13.2571 23.1986C7.77361 23.1986 3.31427 18.7395 3.31427 13.2564C3.31427 7.7732 7.77361 3.31409 13.2571 3.31409Z" fill="white"/>
+                        </svg>
+                    </button>
+                    </label>
+                   </button>
+                </form>
+                <div class="toys_list">
+                    <%toys.forEach(toy => {%>
+                    <div class="toy">
+                        <div class="toy_ph">
+                            <%if(toy.images.length) {%>
+                                <img src="<%= toy.images[0]%>" alt="">
+                            <%}%>
+                        </div>
+                        <div class="toy_body">
+                            <div class="toy_rarity"><%= toy.status%></div>
+                            <div class="toy_name"><%= toy.title%></div>
+                            <div class="toy_descr">
+                                <%= toy.desc%>
+                            </div>
+                            <div class="buttons_block">
+                                <a href="<%= `/admin/edit/${toy._id}?pass=${ADMIN_PASSWORD}`%>" class="toy_button edit_button">Редактировать</a>
+                                <form class="button_form" method="post" action="/admin/delete/<%= toy._id%>?pass=<%=ADMIN_PASSWORD%>">
+                                    <button class="toy_button delete_button">Удалить</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <%})%>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

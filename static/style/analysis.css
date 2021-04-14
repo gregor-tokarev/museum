@@ -1,0 +1,46 @@
+.body{
+    display: flex;
+}
+
+.admin_block {
+    height: 100%;
+    min-height: 100vh;
+    min-width: 380px;
+    background: #FFFBEB;
+}
+
+body {
+    overflow: hidden;
+}
+
+.admin_panel {
+    padding: 22px 19px 10px;
+    font-size: 36px;
+    color: #000000;
+}
+
+.admin_section {
+    padding: 20px;
+    font-size: 18px;
+    color: #ED4040;
+    transition: color 0.2s;
+}
+
+.admin_section_ch {
+    background: rgba(207, 207, 207, 0.3);
+}
+
+.section_name{
+    color: inherit;
+}
+
+.admin_section:not(.admin_section_ch):hover {
+    color: #BB2929;
+}
+
+.soon{
+    padding-top: 457px;
+    padding-left: 183px;
+    color: #979797;
+    font-size: 144px;
+}

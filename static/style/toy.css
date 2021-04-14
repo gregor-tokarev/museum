@@ -1,0 +1,89 @@
+.toy_block{
+    padding-top: 140px;
+    align-items: flex-start;
+}
+
+.toy_info{
+    width: 47%;
+    margin-left: auto;
+}
+
+.toy_imgs {
+    width: 47%;
+}
+
+.toy_rar{
+    font-size: 18px;
+    color: #ED4040;
+    padding-bottom: 6px;
+
+}
+
+.name_toy{
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0 0 40px 0;
+    word-break: break-all;
+}
+
+.body {
+    display: flex;
+}
+
+.comments {
+    margin-top: 60px;
+}
+
+.toy_descr {
+    font-size: 16px;
+}
+
+.mini_image{
+    width: 60px;
+    height: 60px;
+    background: rgba(207, 207, 207, 0.3);
+    margin: 10px 0 10px 10px;
+}
+
+.mini_image {
+    object-fit: contain;
+    object-position: center;
+}
+
+.mini_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mini_container{
+    width: 80px;
+    height: 80px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+.mini_container--active {
+    border-color: #ED4040;
+}
+
+.mini_image_ch{
+    margin: 0;
+}
+
+.norm_image{
+    background: rgba(207, 207, 207, 0.3);
+    margin-left: 23px;
+}
+
+.norm_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

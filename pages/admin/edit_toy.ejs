@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/analysis.css">
+    <link rel="stylesheet" href="/static/style/main.css">
+    <link rel="stylesheet" href="/static/style/add_toy.css">
+    <title>Админ панель</title>
+</head>
+
+<body>
+<div class="body">
+    <%- include('../blocks/admin_panel.ejs', {activeTab: 'add'}) %>
+    <div class="add_block">
+        <div class="inner">
+            <div class="toy2">Игрушка</div>
+            <form enctype="multipart/form-data" action="/admin/edit/<%= toy._id%>?pass=<%= ADMIN_PASSWORD %>" method="POST">
+                <div class="form_names" required>Название</div>
+                <input name="title" class="name_form" value="<%= toy.title%>">
+                <div class="form_names">Редкость</div>
+                <select name="status" class="rarity_form" required>
+                    <option value="редкая" checked>редкая</option>
+                    <option value="очень редкая">очень редкая</option>
+                    <option value="обычная">обычная</option>
+                </select>
+                <div class="form_names">Описание</div>
+                <textarea name="desc" class="descr_form" required><%= toy.desc%></textarea>
+                <label for="ph" id="ph_label">
+                    <div class="photo_label">
+                        <div class="photo_container"></div>
+                        <div class="photo_placehl">
+                            <svg width="70" height="67" viewBox="0 0 70 67" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 7H52.5V31.5H59.5V7C59.5 3.1395 56.3605 0 52.5 0H7C3.1395 0 0 3.1395 0 7V49C0 52.8605 3.1395 56 7 56H35V49H7V7Z"
+                                      fill="#979797"/>
+                                <path d="M21 28L10.5 42H49L35 21L24.5 35L21 28Z" fill="#979797"/>
+                                <path d="M59.5 38.5H52.5V49H42V56H52.5V66.5H59.5V56H70V49H59.5V38.5Z" fill="#979797"/>
+                            </svg>
+                        </div>
+                        <div class="photo_text">Кликните, чтобы выбрать изображения</div>
+                    </div>
+                </label>
+                <input type="file" name="images" multiple accept="image/*" class="photo_form" id="ph">
+                <input type="submit" class="subm" value="Редактировать">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/static/js/index.js"></script>
+</body>
+</html>
