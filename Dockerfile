@@ -1,9 +1,10 @@
 FROM node:12
 
-COPY app /var/app/
+COPY . /var/app/
 WORKDIR /var/app/
 
 RUN npm i
+RUN npm run build
 
 EXPOSE ${PORT}
 

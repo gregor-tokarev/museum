@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node_modules/.bin/jest",
     "copy-files": "cp -r ./pages/ ./dist/pages && cp -r ./static ./dist/static",
-    "build": "npm run copy-files && tsc",
+    "build": "tsc && npm run copy-files",
     "start": "node dist/app.js",
     "setup": "npm run build && npm run start",
     "dev": "node_modules/.bin/nodemon app.ts"
