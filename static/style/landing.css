@@ -1,4 +1,4 @@
-body {
+html {
     scroll-behavior: smooth;
 }
 
@@ -29,6 +29,7 @@ body {
     z-index: 10;
     color: #FFFFFF;
     font-size: 72px;
+    text-align: center;
 }
 
 .arrow_form{
@@ -38,7 +39,7 @@ body {
     display: flex;
     justify-content: center;
     animation-name: arrow-drag;
-    animation-duration: 1s;
+    animation-duration: 0.6s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -48,7 +49,7 @@ body {
         transform: translateY(0px);
     }
     to {
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
 }
 
