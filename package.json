@@ -9,7 +9,7 @@
     "build": "tsc && npm run copy-files",
     "start": "node dist/app.js",
     "setup": "npm run build && npm run start",
-    "dev": "node_modules/.bin/nodemon app.ts"
+    "dev": "nodemon app.ts && gulp watch"
   },
   "keywords": [],
   "author": "",
@@ -36,6 +36,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
+    "gulp": "^4.0.2",
     "jest": "^26.6.3",
     "nodemon": "^2.0.6",
     "ts-node": "^9.1.1",
