@@ -41,7 +41,7 @@ export const edit: RequestHandler = async (req, res) => {
         status,
     }
 
-    if (req.files.length) {
+    if (req.files?.length) {
         let files: string[] = []
         if (req.files) {
             const fl: Express.Multer.File[] = req.files as Express.Multer.File[]
